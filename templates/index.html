@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+    <h1>Gestion des notes</h1>
+    <form method="post">
+        <input type="text" id="grades" name="grades" placeholder="ex: 12,15,18">
+        <button type="submit" id="calculate-btn">Calculer</button>
+    </form>
+    {% if error %}<p id="error-message" style="color:red;">{{ error }}</p>{% endif %}
+    {% if average is not none %}
+        <p id="average">Moyenne : {{ average }}</p>
+        <p id="mention">Mention : {{ mention }}</p>
+        <p id="admitted">Admis : {{ admitted }}</p>
+    {% endif %}
+</body>
+</html>
